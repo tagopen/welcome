@@ -2,9 +2,47 @@ extends base/_layout.pug
 
 block styles
 
-block scripts
-
 block content
-    include components/_nav.pug
-    
-block footer
+  article.main
+    header.header
+      .container
+        .row
+          .col-xs-12
+            h1.text-center.heading We will show you 
+              span.text-uppercase what wear all the stars and where to buy just the same right now!
+
+          .row
+            .col-xs-12
+              .auth.text-center
+                p.auth__descr
+                  | Clothes, footwear, watches, jewelry, luxury goods 
+                  span.auth__descr-newline
+                    | We will show where you can buy any thing which is put on by stars.
+                a.btn.btn-primary.text-uppercase.auth__btn Facebook login
+    section.product
+      .container-fluid
+        .row
+          .col-sm-8.col-md-8.col-md-offset-2
+            .product__photo
+              img.img-responsive.product__img(src='img/buy.jpg' alt='Buy it')
+      .container
+        .row
+          .col-xs-12
+            .product__descr.
+              Every minute we scan all Instagram, Facebook, YouTube profiles of celebrities. We identify all the things on their photos and videos.
+            div.product__list.list
+              p.list__heading
+                | With us you will see:
+              ul.list-unstyled
+                li.list__item Latest trends of fashion
+                li.list__item Brands worn by celebrities
+                li.list__item The prices of all things of celebrities and where to buy just the same
+                li.list__item Beautiful looks with links to the shops
+                li.list__item Top World’s shops
+                div.auth.text-center
+                  p.text-uppercase.auth__descr
+                    | Join! You will be pleased!
+                  a.btn.btn-primary.text-uppercase.auth__btn Facebook login
+
+
+

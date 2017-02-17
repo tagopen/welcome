@@ -1,0 +1,45 @@
+extends base/_layout.pug
+
+block styles
+  link(rel='stylesheet' href='css/card.css')
+block scripts
+  // Highlight JavaScript
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js')
+  // Card JavaScript  
+  script(src='js/demo.js')
+  script(src='js/card.js')
+  script.
+    $('code').each(function(i, e) {hljs.highlightBlock(e)});
+    var card = new Card({ form: '.active form', container: '.card-wrapper' })
+block content
+  article.main
+    header.header
+      .container
+        .row
+          .col-xs-12
+            h1.text-center.heading
+              | Welcome!
+              span.heading-newline Now it is ABSOLUTELY FREE for you, don't miss your chance and enjoy our service!
+    section.card
+      .row
+        .col-xs-12
+          .card.text-center
+            p.card__descr
+              | We shall make sure that you are more than 18 years old. Therefore, enter your card details:
+            .demo-container
+              .card-wrapper
+              .form-container.active
+                form.clearfix(action='')
+                  .col-xs-12.columns
+                    input(placeholder='Card number', type='text', name='number')
+                  .col-xs-3.columns
+                    input(placeholder='MM/YY', type='text', name='expiry')
+                  .col-xs-3.columns
+                    input(placeholder='CVC', type='text', name='cvc')
+                  .col-xs-6.columns
+                    input.button.postfix(type='submit', value='Submit')
+
+            p.card__descr.card__descr--margin
+              | To confirm!
+            p.card__descr.card__descr--margin
+              | * It is the last step

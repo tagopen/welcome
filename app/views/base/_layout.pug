@@ -50,10 +50,9 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     // build:css css/bundle.min.css
 
     // Bootstrap CSS
-    link(rel='stylesheet' href='css/fonts.css')
     link(rel='stylesheet' href='css/bootstrap.css')
-    // Font-Awesome CSS
-    link(rel='stylesheet' href='css/font-awesome.css')
+    // Fonts CSS
+    link(rel='stylesheet' href='css/fonts.css')
     block styles
     // Custom CSS 
     link(rel='stylesheet' href='css/style.css')
@@ -70,23 +69,7 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
   body.body
     div.wrapper
       block content
-    footer.footer
-      block footer
-
-    // build:js js/bundle.min.js
 
     //Modernizr JavaScript
     script(src='js/modernizr-custom.js')
-    // jQuery
-    script(src='js/jquery.js')
-    // Bootstrap JavaScript
-    script(src='js/bootstrap.js')
-    // Old browsers reject JavaScript
-    script(src='js/jquery.reject.js')
     block scripts
-    // Slick-Slider JavaScript
-    script(src='js/slick.js')
-    // Custom JavaScript
-    script(src='js/main.js')
-
-    // endbuild
